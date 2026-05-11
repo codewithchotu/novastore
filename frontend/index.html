@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>NovaStore</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+  <header class="navbar">
+
+    <div class="logo">NovaStore</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products-section">Products</a>
+      <a href="#collections">Collections</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="cart-btn" onclick="openCart()">
+      Cart
+    </button>
+
+  </header>
+
+  <!-- CART -->
+
+  <div id="cart-modal" class="cart-modal">
+
+    <div class="cart-content">
+
+      <h2>Your Cart</h2>
+
+      <div id="cart-items"></div>
+
+      <button onclick="closeCart()" class="close-btn">
+        Close
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <p class="tag">NEW COLLECTION 2026</p>
+
+      <h1>
+        Discover Modern
+        Fashion & Sneakers
+      </h1>
+
+      <p class="hero-text">
+        Explore premium products with stylish modern UI and seamless shopping experience.
+      </p>
+
+      <button class="shop-btn" onclick="goToProducts()">
+        Shop Now
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- PRODUCTS -->
+
+  <section class="products-section" id="products-section">
+
+    <div class="section-header">
+
+      <h2>Trending Products</h2>
+
+      <p>Top collections selected for you</p>
+
+    </div>
+
+    <div id="products" class="products-grid"></div>
+
+  </section>
+
+  <!-- COLLECTIONS -->
+
+  <section id="collections" class="extra-section">
+
+  <h2>Collections</h2>
+
+  <div class="collection-grid">
+
+    <div 
+      class="collection-card"
+      onclick="showCollection('Sneakers Collection')"
+    >
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop" alt="Sneakers Collection">
+      <h3>Sneakers Collection</h3>
+    </div>
+
+    <div 
+      class="collection-card"
+      onclick="showCollection('T-Shirts Collection')"
+    >
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1000&auto=format&fit=crop" alt="T-Shirts Collection">
+      <h3>T-Shirts Collection</h3>
+    </div>
+
+    <div 
+      class="collection-card"
+      onclick="showCollection('Women Fashion')"
+    >
+      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000&auto=format&fit=crop" alt="Women Fashion">
+      <h3>Women Fashion</h3>
+    </div>
+
+    <div 
+      class="collection-card"
+      onclick="showCollection('Luxury Watches')"
+    >
+      <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1000&auto=format&fit=crop" alt="Luxury Watches">
+      <h3>Luxury Watches</h3>
+    </div>
+    <div 
+  class="collection-card"
+  onclick="showCollection('Mobile Collection')"
+>
+ <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1000&auto=format&fit=crop" alt="Mobile Collection">
+
+  <h3>Mobile Collection</h3>
+</div>
+
+
+    <div 
+      class="collection-card"
+      onclick="showCollection('Jackets Collection')"
+    >
+      <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?q=80&w=1000&auto=format&fit=crop" alt="Jackets Collection">
+      <h3>Jackets Collection</h3>
+    </div>
+    <div 
+  class="collection-card"
+  onclick="showCollection('Gaming Collection')"
+>
+ <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop" alt="Gaming Collection">
+  <h3>Gaming Collection</h3>
+</div>
+
+
+    <div 
+      class="collection-card"
+      onclick="showCollection('Bags Collection')"
+    >
+      <img src="https://images.unsplash.com/photo-1467043198406-dc953a3defa0?q=80&w=1000&auto=format&fit=crop" alt="Bags Collection">
+      <h3>Bags Collection</h3>
+    </div>
+
+  </div>
+  
+
+</section>
+
+<section id="contact" class="extra-section">
+
+  <h2>Contact Us</h2>
+
+  <div class="contact-links">
+
+    <a 
+      href="mailto:mo0322975@gmail.com"
+      target="_blank"
+      rel="noopener"
+      title="Send Email"
+      class="contact-card email-card"
+    >
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+
+    <a 
+      href="https://www.linkedin.com/in/mohd-owais-b10b76370"
+      target="_blank"
+      rel="noopener"
+      title="Visit LinkedIn"
+      class="contact-card linkedin-card"
+    >
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+
+    <a 
+      href="https://www.instagram.com/owais_0_0_0"
+      target="_blank"
+      rel="noopener"
+      title="Visit Instagram"
+      class="contact-card instagram-card"
+    >
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a 
+      href="tel:+919876543210"
+      title="Call Us"
+      class="contact-card phone-card"
+    >
+      <i class="fa-solid fa-phone"></i>
+    </a>
+
+  </div>
+
+  <p class="phone-text">
+    +91 9876543210
+  </p>
+
+</section>
+
+<div id="product-modal" class="product-modal">
+
+  <div class="product-modal-content">
+
+    <span 
+      class="close-product"
+      onclick="closeProductModal()"
+    >
+      ×
+    </span>
+
+    <div id="product-details"></div>
+
+  </div>
+
+</div>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
